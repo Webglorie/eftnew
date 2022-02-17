@@ -34,6 +34,14 @@ public class Ticket {
         this.ticketDate = ticketDate;
     }
 
+    public Datum getDatum() {
+        return datum;
+    }
+
+    public void setDatum(Datum datum) {
+        this.datum = datum;
+    }
+
     public Long getId() {
         return id;
     }
@@ -74,6 +82,8 @@ public class Ticket {
                 "id=" + id +
                 ", ticketDate=" + ticketDate +
                 ", ticketGebruikt=" + ticketGebruikt +
+                ", klant=" + klant +
+                ", datum=" + datum +
                 '}';
     }
 }

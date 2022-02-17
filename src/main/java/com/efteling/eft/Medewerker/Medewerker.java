@@ -22,7 +22,7 @@ public class Medewerker {
 
     public Medewerker(String naam, Integer rang) {
         this.naam = naam;
-        this.rang = rang;
+        this.rang = 1;
     }
 
     public Long getId() {

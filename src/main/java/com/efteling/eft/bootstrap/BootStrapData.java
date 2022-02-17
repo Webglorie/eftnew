@@ -57,22 +57,21 @@ public class BootStrapData implements CommandLineRunner {
         klntRepository.save(jasmijn);
 
 
-        for(int i = 1; i < 20; i++) {
+        int aantalDagen = 360;
+        for(int i = 1; i < aantalDagen; i++) {
             LocalDate exceedTime = LocalDate.now().plusDays(i);
             String formattedDate = exceedTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             Datum datumEen = new Datum(ticketController.stringToDate(formattedDate), 100L);
             dtmRepository.save(datumEen);
         }
-        System.out.println("testttt: " + ticketController.stringToDate("12/12/2022"));
 
-
-        Ticket ticketdopeen = new Ticket(ticketController.stringToDate("05/11/2022"));
+        Ticket ticketdopeen = new Ticket(ticketController.stringToDate("02/20/2022"));
         ticketdopeen.setKlant(dop);
         tickRepository.save(ticketdopeen);
-        Ticket ticketdoptwee = new Ticket(ticketController.stringToDate("05/11/2022"));
+        Ticket ticketdoptwee = new Ticket(ticketController.stringToDate("02/20/2022"));
         ticketdoptwee.setKlant(dop);
         tickRepository.save(ticketdoptwee);
-        Ticket ticketdopdrie = new Ticket(ticketController.stringToDate("05/11/2022"));
+        Ticket ticketdopdrie = new Ticket(ticketController.stringToDate("02/20/2022"));
         ticketdopdrie.setKlant(dop);
         tickRepository.save(ticketdopdrie);
         Ticket ticketvlieg = new Ticket(ticketController.stringToDate("07/11/2022"));

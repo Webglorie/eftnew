@@ -34,7 +34,9 @@ public class Start implements CommandLineRunner {
         int menuPage = menu();
         switch(menuPage){
             case 1:
-                klantController.klantCheck();
+                if (!klantController.klantCheck()) {
+                    run();
+                }
                 break;
             case 2:
                 datumController.datumBeschikbaarheid();

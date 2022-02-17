@@ -30,6 +30,7 @@ public class MedewerkerController {
         String naam = nameScanner.nextLine();
         Medewerker medewerker = new Medewerker();
         medewerker.setNaam(naam);
+        medewerker.setRang(1);
         medewerkerRepositoryImpl.save(medewerker);
         System.out.println(ANSI_GREEN + "Medewerker " + naam + " is aangemaakt!" + ANSI_RESET );
         System.out.println("U gaat nu weer terug naar het menu.");
